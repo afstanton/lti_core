@@ -1,24 +1,22 @@
 # LtiCore
 
-TODO: Delete this and the text below, and describe your gem
-
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/lti_core`. To experiment with that code, run `bin/console` for an interactive prompt.
-
 ## Installation
-
-TODO: Replace `UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG` with your gem name right after releasing it to RubyGems.org. Please do not do it earlier due to security reasons. Alternatively, replace this section with instructions to install your gem from git if you don't plan to release to RubyGems.org.
 
 Install the gem and add to the application's Gemfile by executing:
 
-    $ bundle add UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+    $ bundle add lti_core
 
 If bundler is not being used to manage dependencies, install the gem by executing:
 
-    $ gem install UPDATE_WITH_YOUR_GEM_NAME_IMMEDIATELY_AFTER_RELEASE_TO_RUBYGEMS_ORG
+    $ gem install lti_core
 
 ## Usage
 
-TODO: Write usage instructions here
+This gem is to implement as much as possible of the [LTI Core 1.3](https://www.imsglobal.org/spec/lti/v1p3/). This should make implementing an application that complies with that very simple to do.
+
+For those of you using Rails, you'll want to use [lti_core_rails](https://github.com/afstanton/lti_core_rails). The intent of that is to be a drop-in Rails engine to make building a LTI Core 1.3 application dead simple.
+
+The need for this project stems from the [ims-lti](https://github.com/instructure/ims-lti) gem. While that is a decent starting point, it does not appear to implement the latest standards. This is a fresh implementation which will allow developers to use some or all relevant standards as needed.
 
 ## Development
 
@@ -28,7 +26,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/lti_core.
+Bug reports and pull requests are welcome on GitHub at https://github.com/afstanton/lti_core.
 
 ## License
 

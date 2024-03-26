@@ -10,7 +10,7 @@ module LtiCore
     attribute :type, Shale::Type::String, collection: true
 
     json do
-      map "id", to: :id
+      map "id", to: :id, schema: { required: true }
       map "label", to: :label
       map "title", to: :title
       map "type", to: :type

@@ -53,15 +53,15 @@ module LtiCore
       map "picture", to: :picture
       map "email", to: :email
       map "locale", to: :locale
-      map "https://purl.imsglobal.org/spec/lti/claim/deployment_id", to: :deployment_id
-      map "https://purl.imsglobal.org/spec/lti/claim/message_type", to: :message_type
-      map "https://purl.imsglobal.org/spec/lti/claim/version", to: :version
-      map "https://purl.imsglobal.org/spec/lti/claim/roles", to: :roles
+      map "https://purl.imsglobal.org/spec/lti/claim/deployment_id", to: :deployment_id, schema: { required: true }
+      map "https://purl.imsglobal.org/spec/lti/claim/message_type", to: :message_type, schema: { required: true }
+      map "https://purl.imsglobal.org/spec/lti/claim/version", to: :version, schema: { required: true }
+      map "https://purl.imsglobal.org/spec/lti/claim/roles", to: :roles, schema: { required: true }
       map "https://purl.imsglobal.org/spec/lti/claim/role_scope_mentor", to: :role_scope_mentor
       map "https://purl.imsglobal.org/spec/lti/claim/context", to: :context
-      map "https://purl.imsglobal.org/spec/lti/claim/resource_link", to: :resource_link
+      map "https://purl.imsglobal.org/spec/lti/claim/resource_link", to: :resource_link, schema: { required: true }
       map "https://purl.imsglobal.org/spec/lti/claim/tool_platform", to: :tool_platform
-      map "https://purl.imsglobal.org/spec/lti/claim/target_link_uri", to: :target_link_uri
+      map "https://purl.imsglobal.org/spec/lti/claim/target_link_uri", to: :target_link_uri, schema: { required: true }
       map "https://purl.imsglobal.org/spec/lti/claim/launch_presentation", to: :launch_presentation
       map "https://purl.imsglobal.org/spec/lti/claim/custom", to: :custom
       map "https://purl.imsglobal.org/spec/lti/claim/lis", to: :lis

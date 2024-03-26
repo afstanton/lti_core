@@ -11,10 +11,7 @@
       ],
       "properties": {
         "id": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "string"
         },
         "label": {
           "type": [
@@ -34,7 +31,10 @@
             "type": "string"
           }
         }
-      }
+      },
+      "required": [
+        "id"
+      ]
     },
     "LtiCore_Custom": {
       "type": [
@@ -202,22 +202,13 @@
           ]
         },
         "https://purl.imsglobal.org/spec/lti/claim/deployment_id": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "string"
         },
         "https://purl.imsglobal.org/spec/lti/claim/message_type": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "string"
         },
         "https://purl.imsglobal.org/spec/lti/claim/version": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "string"
         },
         "https://purl.imsglobal.org/spec/lti/claim/roles": {
           "type": "array",
@@ -241,10 +232,7 @@
           "$ref": "#/$defs/LtiCore_ToolPlatform"
         },
         "https://purl.imsglobal.org/spec/lti/claim/target_link_uri": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "string"
         },
         "https://purl.imsglobal.org/spec/lti/claim/launch_presentation": {
           "$ref": "#/$defs/LtiCore_LaunchPresentation"
@@ -255,7 +243,14 @@
         "https://purl.imsglobal.org/spec/lti/claim/lis": {
           "$ref": "#/$defs/LtiCore_Lis"
         }
-      }
+      },
+      "required": [
+        "https://purl.imsglobal.org/spec/lti/claim/deployment_id",
+        "https://purl.imsglobal.org/spec/lti/claim/message_type",
+        "https://purl.imsglobal.org/spec/lti/claim/version",
+        "https://purl.imsglobal.org/spec/lti/claim/roles",
+        "https://purl.imsglobal.org/spec/lti/claim/target_link_uri"
+      ]
     },
     "LtiCore_ResourceLink": {
       "type": [
@@ -264,10 +259,7 @@
       ],
       "properties": {
         "id": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "string"
         },
         "description": {
           "type": [
@@ -281,7 +273,10 @@
             "null"
           ]
         }
-      }
+      },
+      "required": [
+        "id"
+      ]
     },
     "LtiCore_ToolPlatform": {
       "type": [
@@ -290,10 +285,7 @@
       ],
       "properties": {
         "guid": {
-          "type": [
-            "string",
-            "null"
-          ]
+          "type": "string"
         },
         "contact_email": {
           "type": [
@@ -331,7 +323,10 @@
             "null"
           ]
         }
-      }
+      },
+      "required": [
+        "guid"
+      ]
     }
   }
 }

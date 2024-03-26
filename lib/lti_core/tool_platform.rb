@@ -13,7 +13,7 @@ module LtiCore
     attribute :version, Shale::Type::String
 
     json do
-      map "guid", to: :guid
+      map "guid", to: :guid, schema: { required: true }
       map "contact_email", to: :contact_email
       map "description", to: :description
       map "name", to: :name

@@ -11,6 +11,6 @@ RSpec.describe LtiCore do
   end
 
   it "parses a JSON LTI message" do
-    expect(lti.to_hash).to match(lti_message)
+    expect(JSON.parse(lti.to_json)).to match(lti_message)
   end
 end

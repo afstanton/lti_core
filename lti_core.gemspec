@@ -46,6 +46,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "fasterer"
   spec.add_development_dependency "flay"
   spec.add_development_dependency "overcommit"
+  spec.add_development_dependency "pry-byebug"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "reek"
   spec.add_development_dependency "rspec"

@@ -1,17 +1,133 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "http://foor.bar/schema/lti_resource_link_request",
-  "description": "LTI Resource Link Request",
+  "$id": "http://foo.bar/schema/lti_resource_link_request",
+  "description": "Lti Resource Link Request",
   "$ref": "#/$defs/LtiCore_LtiResourceLinkRequest",
   "$defs": {
+    "LtiCore_Context": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "label": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "type": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "LtiCore_Custom": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "xstart": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "request_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "LtiCore_LaunchPresentation": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "document_target": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "height": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "width": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "return_url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "LtiCore_Lis": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "person_sourcedid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "course_offering_sourcedid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "course_section_sourcedid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
     "LtiCore_LtiResourceLinkRequest": {
       "type": "object",
       "properties": {
         "iss": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "sub": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "aud": {
           "type": "array",
@@ -20,46 +136,88 @@
           }
         },
         "exp": {
-          "type": "integer"
+          "type": [
+            "integer",
+            "null"
+          ]
         },
         "iat": {
-          "type": "integer"
+          "type": [
+            "integer",
+            "null"
+          ]
         },
         "azp": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "nonce": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "name": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "given_name": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "family_name": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "middle_name": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "picture": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "email": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "locale": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "https://purl.imsglobal.org/spec/lti/claim/deployment_id": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "https://purl.imsglobal.org/spec/lti/claim/message_type": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "https://purl.imsglobal.org/spec/lti/claim/version": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "https://purl.imsglobal.org/spec/lti/claim/roles": {
           "type": "array",
@@ -74,154 +232,103 @@
           }
         },
         "https://purl.imsglobal.org/spec/lti/claim/context": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string"
-            },
-            "label": {
-              "type": "string"
-            },
-            "title": {
-              "type": "string"
-            },
-            "type": {
-              "type": "array",
-              "items": {
-                "type": "string"
-              }
-            }
-          },
-          "required": [
-            "id",
-            "label",
-            "title",
-            "type"
-          ]
+          "$ref": "#/$defs/LtiCore_Context"
         },
         "https://purl.imsglobal.org/spec/lti/claim/resource_link": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string"
-            },
-            "description": {
-              "type": "string"
-            },
-            "title": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "id",
-            "description",
-            "title"
-          ]
+          "$ref": "#/$defs/LtiCore_ResourceLink"
         },
         "https://purl.imsglobal.org/spec/lti/claim/tool_platform": {
-          "type": "object",
-          "properties": {
-            "guid": {
-              "type": "string"
-            },
-            "contact_email": {
-              "type": "string"
-            },
-            "description": {
-              "type": "string"
-            },
-            "name": {
-              "type": "string"
-            },
-            "url": {
-              "type": "string"
-            },
-            "product_family_code": {
-              "type": "string"
-            },
-            "version": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "guid",
-            "contact_email",
-            "description",
-            "name",
-            "url",
-            "product_family_code",
-            "version"
-          ]
+          "$ref": "#/$defs/LtiCore_ToolPlatform"
         },
         "https://purl.imsglobal.org/spec/lti/claim/target_link_uri": {
-          "type": "string"
+          "type": [
+            "string",
+            "null"
+          ]
         },
         "https://purl.imsglobal.org/spec/lti/claim/launch_presentation": {
-          "type": "object",
-          "properties": {
-            "document_target": {
-              "type": "string"
-            },
-            "height": {
-              "type": "integer"
-            },
-            "width": {
-              "type": "integer"
-            },
-            "return_url": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "document_target",
-            "height",
-            "width",
-            "return_url"
-          ]
+          "$ref": "#/$defs/LtiCore_LaunchPresentation"
         },
         "https://purl.imsglobal.org/spec/lti/claim/custom": {
-          "type": "object",
-          "properties": {
-            "xstart": {
-              "type": "string"
-            },
-            "request_url": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "xstart",
-            "request_url"
-          ]
+          "$ref": "#/$defs/LtiCore_Custom"
         },
         "https://purl.imsglobal.org/spec/lti/claim/lis": {
-          "type": "object",
-          "properties": {
-            "person_sourcedid": {
-              "type": "string"
-            },
-            "course_offering_sourcedid": {
-              "type": "string"
-            },
-            "course_section_sourcedid": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "person_sourcedid",
-            "course_offering_sourcedid",
-            "course_section_sourcedid"
+          "$ref": "#/$defs/LtiCore_Lis"
+        }
+      }
+    },
+    "LtiCore_ResourceLink": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "id": {
+          "type": [
+            "string",
+            "null"
           ]
         },
-        "http://www.ExamplePlatformVendor.com/session": {
-          "type": "object",
-          "properties": {
-            "id": {
-              "type": "string"
-            }
-          },
-          "required": [
-            "id"
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "title": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "LtiCore_ToolPlatform": {
+      "type": [
+        "object",
+        "null"
+      ],
+      "properties": {
+        "guid": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "contact_email": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "description": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "name": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "url": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "product_family_code": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "version": {
+          "type": [
+            "string",
+            "null"
           ]
         }
       }

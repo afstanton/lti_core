@@ -1,0 +1,230 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://foor.bar/schema/lti_resource_link_request",
+  "description": "LTI Resource Link Request",
+  "$ref": "#/$defs/LtiCore_LtiResourceLinkRequest",
+  "$defs": {
+    "LtiCore_LtiResourceLinkRequest": {
+      "type": "object",
+      "properties": {
+        "iss": {
+          "type": "string"
+        },
+        "sub": {
+          "type": "string"
+        },
+        "aud": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "exp": {
+          "type": "integer"
+        },
+        "iat": {
+          "type": "integer"
+        },
+        "azp": {
+          "type": "string"
+        },
+        "nonce": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "given_name": {
+          "type": "string"
+        },
+        "family_name": {
+          "type": "string"
+        },
+        "middle_name": {
+          "type": "string"
+        },
+        "picture": {
+          "type": "string"
+        },
+        "email": {
+          "type": "string"
+        },
+        "locale": {
+          "type": "string"
+        },
+        "https://purl.imsglobal.org/spec/lti/claim/deployment_id": {
+          "type": "string"
+        },
+        "https://purl.imsglobal.org/spec/lti/claim/message_type": {
+          "type": "string"
+        },
+        "https://purl.imsglobal.org/spec/lti/claim/version": {
+          "type": "string"
+        },
+        "https://purl.imsglobal.org/spec/lti/claim/roles": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "https://purl.imsglobal.org/spec/lti/claim/role_scope_mentor": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "https://purl.imsglobal.org/spec/lti/claim/context": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "label": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "type": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          },
+          "required": [
+            "id",
+            "label",
+            "title",
+            "type"
+          ]
+        },
+        "https://purl.imsglobal.org/spec/lti/claim/resource_link": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id",
+            "description",
+            "title"
+          ]
+        },
+        "https://purl.imsglobal.org/spec/lti/claim/tool_platform": {
+          "type": "object",
+          "properties": {
+            "guid": {
+              "type": "string"
+            },
+            "contact_email": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "name": {
+              "type": "string"
+            },
+            "url": {
+              "type": "string"
+            },
+            "product_family_code": {
+              "type": "string"
+            },
+            "version": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "guid",
+            "contact_email",
+            "description",
+            "name",
+            "url",
+            "product_family_code",
+            "version"
+          ]
+        },
+        "https://purl.imsglobal.org/spec/lti/claim/target_link_uri": {
+          "type": "string"
+        },
+        "https://purl.imsglobal.org/spec/lti/claim/launch_presentation": {
+          "type": "object",
+          "properties": {
+            "document_target": {
+              "type": "string"
+            },
+            "height": {
+              "type": "integer"
+            },
+            "width": {
+              "type": "integer"
+            },
+            "return_url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "document_target",
+            "height",
+            "width",
+            "return_url"
+          ]
+        },
+        "https://purl.imsglobal.org/spec/lti/claim/custom": {
+          "type": "object",
+          "properties": {
+            "xstart": {
+              "type": "string"
+            },
+            "request_url": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "xstart",
+            "request_url"
+          ]
+        },
+        "https://purl.imsglobal.org/spec/lti/claim/lis": {
+          "type": "object",
+          "properties": {
+            "person_sourcedid": {
+              "type": "string"
+            },
+            "course_offering_sourcedid": {
+              "type": "string"
+            },
+            "course_section_sourcedid": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "person_sourcedid",
+            "course_offering_sourcedid",
+            "course_section_sourcedid"
+          ]
+        },
+        "http://www.ExamplePlatformVendor.com/session": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -3,12 +3,8 @@
 require "shale"
 module LtiCore
   class Custom < Shale::Mapper
-    attribute :xstart, Shale::Type::String
-    attribute :request_url, Shale::Type::String
-
-    json do
-      map "xstart", to: :xstart
-      map "request_url", to: :request_url
-    end
+    # This class can have any attributes you want to extract from the custom field
+    # in the LTI launch request. The attributes should be defined as Shale::Type::String
+    # I need to write code to dynamically extract the custom attributes from the custom field
   end
 end

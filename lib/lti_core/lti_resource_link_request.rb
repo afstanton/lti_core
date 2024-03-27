@@ -11,6 +11,10 @@ require_relative "tool_platform"
 
 module LtiCore
   class LtiResourceLinkRequest < Shale::Mapper
+    # The link request can also have vendor specific claims. They must have a key
+    # that is a fully resolved URL. The value can be any JSON value.
+    # I need to write code to dynamically extract the vendor specific claims
+
     attribute :iss, Shale::Type::String
     attribute :sub, Shale::Type::String
     attribute :aud, Shale::Type::String, collection: true

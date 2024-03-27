@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require "lti_core"
+require "pry-byebug"
 require "simplecov"
 SimpleCov.start
 

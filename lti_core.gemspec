@@ -40,10 +40,13 @@ Gem::Specification.new do |spec|
   # For more information and examples about making a new gem, check out our
   # guide at: https://bundler.io/guides/creating_gem.html
 
+  spec.add_dependency "shale"
+
   spec.add_development_dependency "bundle-audit"
   spec.add_development_dependency "fasterer"
   spec.add_development_dependency "flay"
   spec.add_development_dependency "overcommit"
+  spec.add_development_dependency "pry-byebug"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "reek"
   spec.add_development_dependency "rspec"

@@ -12,6 +12,9 @@ Gemspec/DevelopmentDependencies:
 Metrics/BlockLength:
   Enabled: false
 
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
 Style/Documentation:
   Enabled: false
 

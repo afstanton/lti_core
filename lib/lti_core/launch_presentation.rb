@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require 'shale'
 
 module LtiCore
   class LaunchPresentation < Shale::Mapper
@@ -10,10 +10,10 @@ module LtiCore
     attribute :return_url, Shale::Type::String
 
     json do
-      map "document_target", to: :document_target
-      map "height", to: :height
-      map "width", to: :width
-      map "return_url", to: :return_url
+      map 'document_target', to: :document_target
+      map 'height', to: :height
+      map 'width', to: :width
+      map 'return_url', to: :return_url
     end
   end
 end

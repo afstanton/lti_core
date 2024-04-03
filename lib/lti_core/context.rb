@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require 'shale'
 
 module LtiCore
   class Context < Shale::Mapper
@@ -10,10 +10,10 @@ module LtiCore
     attribute :type, Shale::Type::String, collection: true
 
     json do
-      map "id", to: :id, schema: { required: true }
-      map "label", to: :label
-      map "title", to: :title
-      map "type", to: :type
+      map 'id', to: :id, schema: { required: true }
+      map 'label', to: :label
+      map 'title', to: :title
+      map 'type', to: :type
     end
   end
 end

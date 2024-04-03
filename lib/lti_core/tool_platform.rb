@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require 'shale'
 
 module LtiCore
   class ToolPlatform < Shale::Mapper
@@ -13,13 +13,13 @@ module LtiCore
     attribute :version, Shale::Type::String
 
     json do
-      map "guid", to: :guid, schema: { required: true }
-      map "contact_email", to: :contact_email
-      map "description", to: :description
-      map "name", to: :name
-      map "url", to: :url
-      map "product_family_code", to: :product_family_code
-      map "version", to: :version
+      map 'guid', to: :guid, schema: { required: true }
+      map 'contact_email', to: :contact_email
+      map 'description', to: :description
+      map 'name', to: :name
+      map 'url', to: :url
+      map 'product_family_code', to: :product_family_code
+      map 'version', to: :version
     end
   end
 end

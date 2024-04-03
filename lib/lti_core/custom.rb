@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require 'shale'
 module LtiCore
   class Custom < Shale::Mapper
     # This class can have any attributes you want to extract from the custom field

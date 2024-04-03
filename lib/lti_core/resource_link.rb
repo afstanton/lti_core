@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "shale"
+require 'shale'
 
 module LtiCore
   class ResourceLink < Shale::Mapper
@@ -9,9 +9,9 @@ module LtiCore
     attribute :title, Shale::Type::String
 
     json do
-      map "id", to: :id, schema: { required: true }
-      map "description", to: :description
-      map "title", to: :title
+      map 'id', to: :id, schema: { required: true }
+      map 'description', to: :description
+      map 'title', to: :title
     end
   end
 end

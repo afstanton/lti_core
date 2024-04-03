@@ -8,6 +8,10 @@ module LtiCore
     class << self; attr_accessor :registered_types end
     @registered_types = {}
 
+    # Note that a platform may also add any other claims
+    # from the OpenID Connect Standard Claims list (for example, gender).
+    # https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims
+
     attribute :iss, Shale::Type::String
     attribute :sub, Shale::Type::String
     attribute :aud, Shale::Type::String, collection: true

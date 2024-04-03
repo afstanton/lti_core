@@ -21,13 +21,6 @@ module LtiCore
     # that is a fully resolved URL. The value can be any JSON value.
     # I need to write code to dynamically extract the vendor specific claims
 
-    attribute :iss, Shale::Type::String
-    attribute :sub, Shale::Type::String
-    attribute :aud, Shale::Type::String, collection: true
-    attribute :exp, Shale::Type::Integer
-    attribute :iat, Shale::Type::Integer
-    attribute :azp, Shale::Type::String
-    attribute :nonce, Shale::Type::String
     attribute :name, Shale::Type::String
     attribute :given_name, Shale::Type::String
     attribute :family_name, Shale::Type::String
@@ -49,13 +42,6 @@ module LtiCore
     attribute :lis, LtiCore::Lis
 
     json do
-      map 'iss', to: :iss
-      map 'sub', to: :sub
-      map 'aud', to: :aud
-      map 'exp', to: :exp
-      map 'iat', to: :iat
-      map 'azp', to: :azp
-      map 'nonce', to: :nonce
       map 'name', to: :name
       map 'given_name', to: :given_name
       map 'family_name', to: :family_name
